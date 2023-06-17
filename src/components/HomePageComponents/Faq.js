@@ -1,11 +1,9 @@
 import { Box, Container, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import FaqGif from '../assets/gifs/FAQ.gif'
+import FaqGif from '../../assets/gifs/FAQ.gif'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { SvgIcon } from '@mui/material';
-import { Explore } from '@mui/icons-material';
-import styles from '../css/FrontPage.module.css'
+import styles from '../../css/FrontPage.module.css'
 
 const Faq = () => {
 

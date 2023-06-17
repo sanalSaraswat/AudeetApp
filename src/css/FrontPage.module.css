@@ -81,8 +81,8 @@
 .aboutUsCard {
 
     box-shadow: 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    height: 300px;
+    width: 75%;
+    height: 270px;
 
 }
 
@@ -92,19 +92,32 @@
     height: 700px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    margin: 10% 0;
     
 
 }
 
 .iphone2Image {
-    width: 800px;
-    height: 800px;
+    width: 90%;
+    height: 110%;
 }
 
-.playstoreButton {
-    background-image: url('../assets//images//PlaystoreImage.png');
-    width: 195px;
-    height: 62.89px;
-    border-radius: 10px;
+
+.featuresContainer {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
+
+
+.blueBackground {
+    height: 400px;
+    position: absolute;
+    top: 10%;
+    z-index: -1;
+}
+
+
+

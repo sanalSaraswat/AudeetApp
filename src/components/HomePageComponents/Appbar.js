@@ -1,7 +1,7 @@
 import { AppBar, Button, Toolbar, Typography } from '@mui/material'
 import React from 'react'
-import AppBarImage from '../assets/images/AppBarImage.svg'
-import styles from '../css/FrontPage.module.css'
+import AppBarImage from '../../assets/images/AppBarImage.svg'
+import styles from '../../css/FrontPage.module.css'
 import '@fontsource/roboto';
 
 const Appbar = () => {

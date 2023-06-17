@@ -1,26 +1,27 @@
 import { Box, Button, Card, CardContent, CardMedia, Container, Typography } from '@mui/material'
 import React from 'react'
-import styles from '../css/FrontPage.module.css'
-import AboutUsImage from '../assets/images/AboutUsImage.svg'
-import ProfitGif from '../assets/gifs/profit.gif'
-import Iphone from '../assets/images/Iphone.png'
-import Iphone2 from '../assets/images/Iphone2.png'
-import Playstore from '../assets/images/PlaystoreImage.png'
-import Apple from '../assets/images/AppleImage.png'
+import styles from '../../css/FrontPage.module.css'
+import AboutUsImage from '../../assets/images/AboutUsImage.svg'
+import ProfitGif from '../../assets/gifs/profit.gif'
+import UnlockedGif from '../../assets/gifs/unlocked.gif'
+import DocumentGif from '../../assets/gifs/document.gif'
+import Iphone from '../../assets/images/Iphone.svg'
+import Iphone2 from '../../assets/images/Iphone2.png'
 
 
-const CardContainer = (image, title, content) => {
+const CardContainer = (image, title, content, position) => {
 
     return (
         <Card
-            sx={{ borderRadius: '40px' }}
+            sx={{ borderRadius: '40px', position: 'absolute', top: position}}
             className={styles.aboutUsCard}
             elevation={3}
+            
         >
 
             <CardMedia
                 sx={{
-                    height: '128px',
+                    height: '100px',
                     display: 'flex',
                     justifyContent: 'center'
                 }}
@@ -39,11 +40,11 @@ const CardContainer = (image, title, content) => {
                 }}
             >
 
-                <Typography padding={'0 5%'} gutterBottom variant="h5" component="div">
+                <Typography textAlign={'center'} gutterBottom variant="h5" component="div">
                     {title}
                 </Typography>
 
-                <Typography padding={'0 5%'} variant="body1" color="text.secondary">
+                <Typography textAlign={'center'} padding={'0 5%'} variant="body1" color="text.secondary">
                     {content}
                 </Typography>
 
@@ -63,14 +64,7 @@ const AboutUs = () => {
         <>
 
             <div className={styles.aboutUsBanner}>
-                {/* <Container
-                // sx={{
-                //     display: 'flex',
-                //     flexDirection: 'row',
-                //     padding: '5.5rem',
 
-                // }}
-            > */}
 
                 <Box
                     sx={{
@@ -140,7 +134,6 @@ const AboutUs = () => {
 
                 </Box>
 
-                {/* </Container> */}
 
 
                 <div>
@@ -178,48 +171,60 @@ const AboutUs = () => {
 
                     <div
                         style={{
-                            width: '20%'
+                            width: '25%',
+                            position: 'relative',
+                            display: 'flex',
+                            justifyContent: 'center'
                         }}
                     >
 
                         {CardContainer(ProfitGif,
                             'Cost effective',
-                            'Eliminate need for physical storage, postage cost associated with paper based system'
+                            'Eliminate need for physical storage, postage cost associated with paper based system',
+                            '5%'
                         )}
 
-                        {CardContainer(ProfitGif,
-                            'Cost effective',
-                            'Eliminate need for physical storage, postage cost associated with paper based system'
+                        {CardContainer(UnlockedGif,
+                            'Data Security',
+                            'Financial data are fully encrypted and safe',
+                            '65%'
                         )}
 
                     </div>
 
                     <div
                         style={{
-                            width: '60%',
+                            width: '50%',
                             justifyContent: 'center',
-                            display: 'flex'
+                            display: 'flex',
                         }}
                     >
 
                         <img src={Iphone} alt='Iphone'></img>
+                        
 
                     </div>
 
                     <div
                         style={{
-                            width: '20%'
+                            width: '25%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            position: 'relative'
+
                         }}
                     >
 
-                        {CardContainer(ProfitGif,
-                            'Cost effective',
-                            'Eliminate need for physical storage, postage cost associated with paper based system'
+                        {CardContainer(DocumentGif,
+                            'Time saving',
+                            'Online accounting tools automate various manual and time-consuming tasks.',
+                            '48%'
                         )}
 
-                        {CardContainer(ProfitGif,
-                            'Cost effective',
-                            'Eliminate need for physical storage, postage cost associated with paper based system'
+                        {CardContainer(DocumentGif,
+                            'Accessibility',
+                            'Access your finanacial data from anywhere  anytime and perfrom different tasks',
+                            ''
                         )}
 
                     </div>
@@ -228,12 +233,14 @@ const AboutUs = () => {
             </div>
 
 
-            <div className={styles.backgroundImage3}>
+            <div className={styles.backgroundImage3}
+                
+            >
 
                 <div style={{
                     width: '50%',
                     display: 'flex',
-                    justifyContent: 'cen'
+                    justifyContent: 'center'
                 }}>
 
                     <img className={styles.iphone2Image} src={Iphone2} alt='Image' />
@@ -242,7 +249,11 @@ const AboutUs = () => {
 
 
                 <div style={{
-                    width: '50%'
+                    width: '30%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    gap: '5rem'
                 }}>
                     <Typography variant='h3'>
                         Introducing <span style={{ color: '#0090BD' }}>Audeet</span>
@@ -252,15 +263,7 @@ const AboutUs = () => {
                         The Ultimate Accounting App Coming Soon to Google Play and App store!
                     </Typography>
 
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent:'space-between'
-                    }}>
-                        <button className={styles.playstoreButton}>
-
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
 

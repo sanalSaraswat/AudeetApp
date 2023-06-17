@@ -1,0 +1,10 @@
+.loginBanner {
+    height: 100vh;
+    width: 100%;
+}
+
+.ellipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

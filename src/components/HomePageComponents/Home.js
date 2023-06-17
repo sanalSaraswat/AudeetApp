@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '../css/FrontPage.module.css'
+import styles from '../../css/FrontPage.module.css'
 import { Box, Button, Typography } from '@mui/material'
-import IphoneInHand from '../assets/images/IphoneInHand.png'
+import IphoneInHand from '../../assets/images/IphoneInHand.png'
 import { alignProperty } from '@mui/material/styles/cssUtils'
 
 const Home = () => {

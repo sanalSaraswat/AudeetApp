@@ -1,8 +1,8 @@
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import React from 'react'
-import AudeetLogo from '../assets/images/AudeetLogo.svg'
-import styles from '../css/FrontPage.module.css'
-import AppBarImage from '../assets/images/AppBarImage.svg'
+import AudeetLogo from '../../assets/images/AudeetLogo.svg'
+import styles from '../../css/FrontPage.module.css'
+import AppBarImage from '../../assets/images/AppBarImage.svg'
 
 const Footer = () => {
     return (
@@ -33,8 +33,8 @@ const Footer = () => {
                         placeholder='Enter your email address to subscribe '
                         type='text'
                     />
-                    <Button
-                        sx={{
+                    <button
+                        style={{
 
                             padding: '1rem .75rem',
                             backgroundColor: '#011135',
@@ -46,7 +46,7 @@ const Footer = () => {
 
                     >
                         Try now
-                    </Button>
+                    </button>
                 </Box>
 
 
